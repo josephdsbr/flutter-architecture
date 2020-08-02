@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///E:/www/flutter/flutterArchitecture/lib/app/app_controller.dart';
+import 'package:flutterArchitecture/app/app_controller.dart';
 import 'package:flutterArchitecture/app/screens/home/home_screen.dart';
 
 class AppWidget extends StatelessWidget {

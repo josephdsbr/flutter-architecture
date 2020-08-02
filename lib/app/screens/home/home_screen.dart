@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterArchitecture/app/repositories/api_advisor_repository.dart';
 import 'package:flutterArchitecture/app/screens/home/home_controller.dart';
-import 'package:flutterArchitecture/app/services/client_http_service.dart';
-import 'package:flutterArchitecture/app/viewmodels/api_advisor_view_model.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import 'components/custom_switch_widget.dart';
 
@@ -13,14 +11,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-  final controller = HomeController(
-    ApiAdvisorViewModel(
-      ApiAdvisorRepository(
-        ClientHttpService()
-      )
-    )
-  );
+  final controller = Modular.get<HomeController>();
 
   @override
   Widget build(BuildContext context) {
